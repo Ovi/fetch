@@ -1,0 +1,203 @@
+/* 
+<!-- Property of iOwais.com -->
+<!-- All rights reserved -->
+ */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Rakkas');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+:root {
+    background: #f5f6fa;
+    color: #9c9c9c;
+    font: 1rem "PT Sans", sans-serif;
+}
+
+html,
+body,
+.container,
+.posts {
+    height: 100%;
+    font: 1rem "PT Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_field {
+    width: 360px;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+}
+
+.form_field:disabled {
+    background: #f9f9f9;
+}
+
+.fetch-btn {
+    display: inline-block;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+    background: #7f8ff4;
+    color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 12px 36px;
+    margin-bottom: 20px;
+    margin-left: -96px;
+    text-transform: uppercase;
+}
+
+.fetch-btn:hover {
+    background: #6c7ff2;
+}
+
+.fetch-btn:active {
+    background: #7f8ff4;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fetch-btn:disabled {
+    cursor: not-allowed;
+    background: #6a6c7a;
+    color: #fff;
+}
+
+p.tip {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.msg {
+    position: absolute;
+    z-index: 2;
+    width:400px;
+    margin-left:-200px;
+    left:50%;
+    padding: 10px;
+    text-align: center
+}
+
+.posts {
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: #f5f6fa;
+    color: #9c9c9c;
+    padding: 50px 30px 30px 30px;
+    overflow: auto;
+}
+
+.posts::-webkit-scrollbar {
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.posts::-webkit-scrollbar-thumb {
+	border-radius: 50px;
+	box-shadow: none;
+	background-color: #555;
+}
+
+.posts::-webkit-scrollbar-track {
+	box-shadow: none;
+	border-radius: 50px;
+	background-color: #F5F5F5;
+}
+
+.post-group {
+    width: 100%;
+    height: 100%;
+}
+
+.post {
+    width: 100%;
+    background: #FFF;
+    padding: 15px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-family: 'Rakkas', "PT Sans", sans-serif;
+    font-size: 1.5em;
+    color: rgb(59, 59, 59);
+}
+
+.clear-all {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    text-decoration: underline;
+    color: #333;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 360px) {
+    .fetch-btn {
+        padding: 12px 24px;
+        margin-left: -74px;
+    }
+    .form_field {
+        width: 89%;
+    }
+    .msg {
+        width:300px;
+        margin-left:-150px;
+    }
+}
