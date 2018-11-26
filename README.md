@@ -7,4 +7,4 @@ Getting Posts From Fake API And Rendering It
 
 Api: https://jsonplaceholder.typicode.com/posts/
 
-<b>Demo: https://oyeovi.github.io/fetch/</b>
+<b>Demo: https://muhammadovi.github.io/fetch/</b>
