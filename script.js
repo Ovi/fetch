@@ -2,7 +2,10 @@
 // <!-- All rights reserved -->
 $('#postID').on("focus", () => { $('#postID').val('') });
 $('#postID').on("input", () => { $('.msg').html('').css({"background-color": "transparent"}) });
-$('.clear-all').on("click", () => { $('.post-group').html('')});
+$('.clear-all').on("click", () => {
+    $('.post-group').html('');
+    $('.posts').fadeOut();
+});
 
 $('.form').submit( e => {
     e.preventDefault();
@@ -15,13 +18,13 @@ $('.form').submit( e => {
             .css({"background-color": "#FFD2D2", "color": "#D8000C"});
         return;
     }
-    if(postID < 1 || postID > 100) {
+    if(postID < 1 || postID > 150) {
         $('.msg')
-            .html('Range Must be b/w 1 - 100')
+            .html('Range must be between 1 - 150')
             .css({"background-color": "#FFD2D2", "color": "#D8000C"});
         return;
     }
-    if(postID > 0 && postID < 101) {
+    if(postID > 0 && postID < 151) {
         $("input, button").prop('disabled', true);
         startFetch(postID);
         $('.msg').html('Fetching...');
@@ -33,7 +36,7 @@ $('.form').submit( e => {
 });
 
 function startFetch(postID) {
-    const url = 'https://jsonplaceholder.typicode.com/posts/';
+    const url = 'https://dummyjson.com/posts/';
     var newUrl = url + postID;
     fetch(newUrl)
         .then(response => response.json())

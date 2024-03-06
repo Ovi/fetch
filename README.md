@@ -5,6 +5,6 @@ Getting Posts From Fake API And Rendering It
 
 <i>(JQuery Used)</i>
 
-Api: https://jsonplaceholder.typicode.com/posts/
+Api: https://dummyjson.com/posts/
 
-<b>Demo: https://muhammadovi.github.io/fetch/</b>
+<b>Demo: https://ovi.github.io/fetch/</b>
